@@ -11,27 +11,3 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
-
-model Project {
-  id            String   @id @default(uuid())
-  title         String
-  description   String
-  members       Person[]
-  startDate     DateTime
-  endDate       DateTime
-  technologies  Technology[]
-}
-
-model Technology {
-  id            String   @id @default(uuid())
-  name          String
-  projects      Project[]
-}
-
-model Person {
-  id            String   @id @default(uuid())
-  name          String
-  projects      Project[]
-  phone         String
-  email         String
-}

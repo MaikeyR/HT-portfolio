@@ -1,0 +1,5 @@
+model Technology {
+  id            String   @id @default(uuid())
+  name          String
+  projects      Project[]
+}

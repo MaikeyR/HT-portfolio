@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../../shared/prisma/prisma.service';
 import { Project } from '../service/entities/project.entity';
-import { ProjectPersistenceMapper } from '../data/persistence-mappers/project.persistence-mapper';
+import { ProjectPersistenceMapper } from '../data/persistence-mappers/prisma-project.persistence-mapper';
 import { ProjectRepository } from './project.repository';
 
 @Injectable()

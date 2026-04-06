@@ -1,0 +1,7 @@
+model Person {
+  id            String   @id @default(uuid())
+  name          String
+  projects      Project[]
+  phone         String
+  email         String
+}
