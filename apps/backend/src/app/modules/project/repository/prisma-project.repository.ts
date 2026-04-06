@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../../shared/prisma/prisma.service';
 import { Project } from '../service/entities/project.entity';
-import { ProjectPersistenceMapper } from '../data/persistence-mappers/prisma-project.persistence-mapper';
+import { PrismaProjectPersistenceMapper } from '../data/persistence-mappers/prisma-project.persistence-mapper';
 import { ProjectRepository } from './project.repository';
 
 @Injectable()
@@ -17,6 +17,6 @@ export class PrismaProjectRepository implements ProjectRepository {
       return null;
     }
 
-    return ProjectPersistenceMapper.toDomain(project);
+    return PrismaProjectPersistenceMapper.toDomain(project);
   }
 }
