@@ -1,6 +1,6 @@
 import { Args, ID, Query, Resolver } from '@nestjs/graphql';
-import { GetProjectByIdHandler } from '../../../application/handlers/get-project-by-id.handler';
-import { GetProjectByIdQuery } from '../../../application/queries/get-project-by-id.query';
+import { GetProjectByIdHandler } from '../../../service/handlers/get-project-by-id.handler';
+import { GetProjectByIdQuery } from '../../../service/queries/get-project-by-id.query';
 import { ProjectGraphqlV1Model } from './models/project-graphql-v1.model';
 
 @Resolver(() => ProjectGraphqlV1Model)

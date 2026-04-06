@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../../shared/prisma/prisma.service';
-import { Project } from '../domain/entities/project.entity';
+import { Project } from '../service/entities/project.entity';
 import { ProjectPersistenceMapper } from '../data/persistence-mappers/project.persistence-mapper';
 import { ProjectRepository } from './project.repository';
 

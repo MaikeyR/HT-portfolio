@@ -13,4 +13,4 @@ import { ProjectRepository } from '../repository/project.repository';
   ],
   exports: [GetProjectByIdHandler],
 })
-export class ProjectApplicationModule {}
+export class ProjectServiceModule {}
