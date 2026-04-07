@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { ProjectModule } from './modules/project/project.module';
 import { PrismaModule } from './shared/prisma/prisma.module';
 import { AppError } from './shared/errors/app.error';
+import { Request } from 'express';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { AppError } from './shared/errors/app.error';
       ),
       path: '/graphql',
       sortSchema: true,
+      context: ({ req }: { req: Request }) => ({ req }),
       formatError: (formattedError, error) => {
         const originalError = error instanceof GraphQLError ? error.originalError : null;
 

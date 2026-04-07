@@ -7,10 +7,21 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
+type Mutation {
+  createProject(input: ProjectInput!): Project!
+}
+
 type Project {
   description: String!
   endDate: DateTime!
   id: ID!
+  startDate: DateTime!
+  title: String!
+}
+
+input ProjectInput {
+  description: String!
+  endDate: DateTime!
   startDate: DateTime!
   title: String!
 }

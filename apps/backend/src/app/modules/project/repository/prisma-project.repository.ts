@@ -19,4 +19,18 @@ export class PrismaProjectRepository implements ProjectRepository {
 
     return PrismaProjectPersistenceMapper.toDomain(project);
   }
+
+  async create(project: Project): Promise<Project> {
+    const createdProject = await this.prisma.project.create({
+      data: {
+        id: project.id,
+        title: project.title,
+        description: project.description,
+        startDate: project.startDate,
+        endDate: project.endDate,
+      },
+    });
+
+    return PrismaProjectPersistenceMapper.toDomain(createdProject);
+  }
 }

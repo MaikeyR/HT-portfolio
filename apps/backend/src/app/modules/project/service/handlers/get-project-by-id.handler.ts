@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { Project } from '../entities/project.entity';
 import { ProjectRepository } from '../../repository/project.repository';
 import { GetProjectByIdQuery } from '../queries/get-project-by-id.query';
-import { ProjectNotFoundError } from '../errors/not-found.error';
+import { ProjectNotFoundError } from '../errors/project-not-found.error';
 
 @Injectable()
 export class GetProjectByIdHandler {
